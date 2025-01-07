@@ -1,0 +1,96 @@
+/* defining styles for grid app */
+body{
+  background:#111;
+}
+.header{
+  background:#222;	
+  padding:20px 30px;
+  margin-bottom:50px;
+  display:flex;
+  justify-content:space-between;
+}
+.header img{
+  width:180px;
+  height:60px;   
+}
+		/* first-child,	nth-child(pos)  */
+.header div:last-child{
+  background:#ffff33;	
+  height:28px;
+  border-radius:15px;
+  /* padding:0 10px; */
+}
+.header input{
+  border:none;
+  outline:none;
+  height:28px;  
+  background:#000;
+  color:#fff;
+}
+.slogon{
+  text-align:center;	
+  margin-bottom:60px;
+}
+.slogon div{
+  color:#fff;
+  font-size:36px;  
+  font-family:'Sitka Text';
+}
+.slogon p{
+  color:#ccc;
+  font-size:18px;
+}
+
+.grid-box{
+  display:grid;   /* 20rX1c */	
+  /* grid-template-columns:300px 400px 300px; */
+  grid-template-columns:250px 250px 250px 250px 250px ;
+  grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+  
+  /* grid-template-rows:250px 250px 250px 250px 250px; */
+  grid-template-rows:auto auto auto auto auto;
+  /* column-gap:15px;
+  row-gap:20px;	*/
+  grid-gap:15px;
+  width:80%;
+  margin:auto;  
+}
+
+.grid-box img{
+   width:100%;
+   height:280px;
+   border-radius:10px;
+}
+.grid-box a{
+   color:#fff;
+   font-size:20px;
+   text-decoration:none;   
+}
+.grid-box a:hover{
+   color:#ffff00;
+   text-decoration:underline;
+}
+.grid-box section div:last-child{
+   color:#00ffff;
+   font-size:18px;
+}
+.grid-box section{
+	transition:500ms;
+}
+
+.grid-box section:hover{
+   transform:scale(1.05);
+   /*rotate(360deg) rotateY(180deg) rotateX(90deg)
+   translate(30px, 30px) translateY(-50px) translateX(-50px)
+   skewY(-10deg)  skewX(-10deg) skew(10deg, 15deg)
+	scaleX(1.05) scaleY(1.05), scale(1.05) */
+}
+
+.footer{
+  background:#222;	
+  margin-top:50px;
+  display:flex;
+  justify-content:space-between;
+  padding:30px 20px;
+  color:#ddd;
+}
